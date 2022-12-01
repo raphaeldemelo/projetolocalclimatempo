@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../Contexts/user';
 import { key, apiFusoLocal } from '../../services/api';
-import Lottie from 'react-lottie'
 import { toast } from 'react-toastify';
-import * as animationData from '../../assets/naoencontrado.json'
+import Lottie from "lottie-react";
+import naoencontrado from '../../assets/naoencontrado.json'
 import Loading from '../../components/Loading';
 import Menu from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -31,15 +31,6 @@ export default function FusoHorario() {
     const [loading, setLoading] = useState(false);
     const [fusoLocal, setFusoLocal] = useState('');
     const [horario, setHorario] = useState('');
-
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-        rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice'
-        }
-    };
 
     async function BuscarFusoLocal() {
         if (cidade === '') {
@@ -106,9 +97,10 @@ export default function FusoHorario() {
                                         <Separator size={1} />
                                         <Card style={{ display: 'flex', height: '100%', flexDirection: 'column', padding: 30 }}>
                                             <Lottie
-                                                options={defaultOptions}
+                                                animationData={naoencontrado}
                                                 height={300}
                                                 width={300}
+                                                loop={true}
                                             />
                                             <Titulo style={{ fontWeight: 400, fontSize: 14 }}>Não encontramos nenhum dado</Titulo>
                                         </Card>

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { UserContext } from '../../Contexts/user';
-import Lottie from 'react-lottie'
-import * as animationData from '../../assets/naoencontrado.json'
+import Lottie from "lottie-react";
+import naoencontrado from '../../assets/naoencontrado.json'
 import { apiCep } from '../../services/api';
 import { FiSearch } from 'react-icons/fi'
 import Menu from '../../components/Header';
@@ -38,14 +38,15 @@ export default function BuscarCep() {
     const { cep, setCep, cepUser, setCepUser, minhaLat, setMinhaLat, minhaLong, setMinhaLong } = useContext(UserContext);
     const [loading, setLoading] = useState(false);
 
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-        rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice'
-        }
-    };
+    // const defaultOptions = {
+    //     loop: true,
+    //     autoplay: true,
+    //     animationData: animationData,
+    //     rendererSettings: {
+    //         preserveAspectRatio: 'xMidYMid slice'
+    //     }
+    // };
+
 
     async function Buscar() {
         if (cep === '') {
@@ -112,9 +113,10 @@ export default function BuscarCep() {
                                         <Separator size={1} />
                                         <Card style={{ display: 'flex', height: '100%', flexDirection: 'column', padding: 30 }}>
                                             <Lottie
-                                                options={defaultOptions}
+                                                animationData={naoencontrado}
                                                 height={300}
                                                 width={300}
+                                                loop={true}
                                             />
                                             <Titulo style={{ fontWeight: 400, fontSize: 14 }}>Não encontramos nenhum dado</Titulo>
                                         </Card>
