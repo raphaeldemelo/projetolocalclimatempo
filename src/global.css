@@ -35,3 +35,9 @@ body::-webkit-scrollbar-thumb {
   border-radius: 8px;       /* roundness of the scroll thumb */
   border: 3px solid #312E38;  /* creates padding around scroll thumb */
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
