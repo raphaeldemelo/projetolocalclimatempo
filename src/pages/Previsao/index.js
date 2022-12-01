@@ -66,7 +66,7 @@ export default function Previsao() {
                     <AreaInput>
                         <Input
                             type='text'
-                            placeholder='Digite um cep...'
+                            placeholder='Digite uma cidade...'
                             value={local}
                             onChange={(e) => setLocal(e.target.value)}
                         />
@@ -115,7 +115,7 @@ export default function Previsao() {
 
                                         <Card style={{ display: 'flex', height: '100%', padding: 100 }}>
                                             <InfoCard style={{ fontWeight: 200, fontSize: 18 }}>{climaLocal.description}</InfoCard>
-                                            <InfoCard>{climaLocal.temperature}</InfoCard>
+                                            <InfoCard>{climaLocal.temperature} teste</InfoCard>
                                             <InfoCard style={{ fontWeight: 200, fontSize: 26 }}>{regiao}</InfoCard>
                                         </Card>
 
