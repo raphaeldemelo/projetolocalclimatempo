@@ -54,10 +54,6 @@ export const MenuLink = styled.div`
     opacity: 1;
   }
 
-  :last-child{
-      display: none;
-  }
-
   @media (max-width: 768px) {
     :last-child{
       display: flex;

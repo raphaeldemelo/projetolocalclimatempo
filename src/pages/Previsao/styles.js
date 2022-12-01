@@ -124,9 +124,8 @@ color: #F4EDE8;
 font-size: 120px;
 font-weight: 600;
 
-
 @media (max-width: 768px) {
-  font-size: 50px;
+  font-size: 30px;
 }
 `;
 

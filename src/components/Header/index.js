@@ -33,12 +33,7 @@ export default function Header() {
         <MenuLink onClick={() => setIsOpen(!isOpen)} >
           <Link to='/Previsao'><Texto>Previsão do Tempo</Texto></Link>
         </MenuLink>
-        <MenuLink onClick={() => setIsOpen(!isOpen)} >
-          <Link to='/Contato'><Texto>Contato</Texto></Link>
-        </MenuLink>
       </Menu>
-
-      <Botao href='#contato'>Contato</Botao>
     </Container>
   )
 }

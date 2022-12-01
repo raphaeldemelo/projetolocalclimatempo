@@ -113,9 +113,9 @@ export default function Previsao() {
                                             <Separator size={1} />
                                         </Article>
 
-                                        <Card style={{ display: 'flex', height: '100%', padding: 100 }}>
+                                        <Card style={{ display: 'flex', height: '100%', padding: 80 }}>
                                             <InfoCard style={{ fontWeight: 200, fontSize: 18 }}>{climaLocal.description}</InfoCard>
-                                            <InfoCard>{climaLocal.temperature} teste</InfoCard>
+                                            <InfoCard>{climaLocal.temperature}</InfoCard>
                                             <InfoCard style={{ fontWeight: 200, fontSize: 26 }}>{regiao}</InfoCard>
                                         </Card>
 
